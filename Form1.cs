@@ -58,7 +58,7 @@ namespace Fake_Wana_Decrypt0r
             lblDatePayment.Text = _paymentDateTime.ToString("M'/'d'/'yyyy hh:mm:ss");
             lblDateRemove.Text = _removeDateTime.ToString("M'/'d'/'yyyy hh:mm:ss");
 
-            timeSpanMethod();
+            TimeSpanMethod();
             tmrTime.Start();
         }
 
@@ -75,7 +75,7 @@ namespace Fake_Wana_Decrypt0r
         {
             _paymentDateTime= _paymentDateTime.AddSeconds(-1);
             _removeDateTime= _removeDateTime.AddSeconds(-1);
-            timeSpanMethod();
+            TimeSpanMethod();
         }
         private void button1_Click(object sender, EventArgs e)
         {
