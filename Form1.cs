@@ -29,7 +29,6 @@ namespace Fake_Wana_Decrypt0r
         private DateTime _paymentDateTime, _removeDateTime;
         private void Form1_Load(object sender, EventArgs e)
         {
-
             rchContent.Rtf = @"{\rtf1\ansi{\b\fs30 What Happened to My Computer?}"
             + @"\line {\b Y}our important files are encrypted."
             + @"\line Many of your documents, photos, videos, databases and other files are no longer accessible because they have been encrypted. Maybe you are busy looking for a way to recover your files, but do not waste your time. Nobody can recover your files without our decryption engine."
@@ -46,8 +45,7 @@ namespace Fake_Wana_Decrypt0r
             + @"\line And send the correct amount to the address specified in this window."
             + @"\line After your payment, click <Check Payment>. Best time to check: 9:00am – 11:00am GMT."
             + "}";
-
-
+            
             LoadFont(); //Load to Memory LCD type font named Bazaronite
             AllocFont(_font,lblPayment,18); //Apply font from memory
             AllocFont(_font, lblRemove, 18); //Apply font from memory
@@ -64,7 +62,7 @@ namespace Fake_Wana_Decrypt0r
             tmrTime.Start();
         }
 
-        public void timeSpanMethod()
+        private void TimeSpanMethod()
         {
             TimeSpan tsPayment = _paymentDateTime - DateTime.Now;
             lblPayment.Text = tsPayment.Days.ToString("D2") + ":" + tsPayment.Hours.ToString("D2") + ":" + tsPayment.Minutes.ToString("D2") + ":" + tsPayment.Seconds.ToString("D2");
